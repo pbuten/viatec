@@ -1,0 +1,10 @@
+<!--@subject Нові товари Viatec за {{var file_date}} @-->
+<!--@vars {
+"var skus":"Артикули",
+"var file_date":"Дата"
+} @-->
+{{template config_path="design/email/header_template"}}
+<table>
+    <tr>{{trans "Нові товари: %skus." skus=$skus}}</tr>
+</table>
+{{template config_path="design/email/footer_template"}}

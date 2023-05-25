@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<tab id="buten" translate="label" sortOrder="999">
+			<label>Buten</label>
+		</tab>
+		<section id="viatec" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+			<label>Viatec</label>
+			<tab>buten</tab>
+			<resource>Buten_Viatec::config_buten_viatec</resource>
+			<group id="options" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+				<label>Options</label>
+                <field id="categoryid" type="text" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Root Category Id</label>
+				</field>
+                <field id="required_categories" type="textarea" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Категорії для завантаження</label>
+				</field>
+                <field id="date" type="text" sortOrder="30" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Останнє оновлення</label>
+				</field>
+                <field id="emails" type="text" sortOrder="40" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Адреси для повідомлення щодо нових товарів</label>
+				</field>
+                <field id="tmp_new_products" type="text" sortOrder="50" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+					<label>Артикули нових товарів</label>
+				</field>
+                <field id="sync_button" translate="label" type="button" sortOrder="40" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Завантажити зараз</label>
+                    <frontend_model>Buten\Viatec\Block\System\Config\Button</frontend_model>
+                </field>
+			</group>
+		</section>
+	</system>
+</config>

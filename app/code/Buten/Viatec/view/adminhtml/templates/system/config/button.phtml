@@ -1,0 +1,29 @@
+<?php
+/**
+ * @var \Buten\Viatec\Block\System\Config\Button $block
+ */
+?>
+<script>
+    require([
+        'jquery',
+        'prototype',
+    ], function ($) {
+        function importAllProducts() {
+            params = {};
+            new Ajax.Request('<?php echo $block->getCustomUrl() ?>', {
+                loaderArea: true,
+                asynchronous: true,
+                parameters: params
+            });
+        }
+        $('#importbtn').click(function () {
+            importAllProducts();
+        });
+    });
+</script>
+
+<?php
+$controller = $block->getCustomUrl();
+echo $block->getButtonHtml();
+?>
+
